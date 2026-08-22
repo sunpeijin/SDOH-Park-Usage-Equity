@@ -12,6 +12,14 @@ import {
   type ParkUseMetric,
 } from "./lib/park-use-data";
 
+export const dynamic = "force-static";
+
+const PUBLIC_BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+function publicAssetPath(path: string): string {
+  return `${PUBLIC_BASE_PATH}/${path}`;
+}
+
 const YEARS = ["2019", "2020", "2021"] as const;
 type Year = (typeof YEARS)[number];
 
@@ -550,11 +558,11 @@ export default function Home() {
   useEffect(() => {
     let active = true;
     Promise.all([
-      fetch("/data/park_summary_public.csv").then((response) => {
+      fetch(publicAssetPath("data/park_summary_public.csv")).then((response) => {
         if (!response.ok) throw new Error("Park summary could not be loaded.");
         return response.text();
       }),
-      fetch("/data/facility_equity_evidence.csv").then((response) => {
+      fetch(publicAssetPath("data/facility_equity_evidence.csv")).then((response) => {
         if (!response.ok) throw new Error("Facility evidence could not be loaded.");
         return response.text();
       }),
@@ -851,15 +859,15 @@ export default function Home() {
           </div>
           <div className="findings-figure-grid">
             <figure className="finding-figure">
-              <div className="finding-figure-media"><img src="/figures/figure%2001.png" alt="Park-use volume and diversity patterns by park type across the study period" /></div>
+              <div className="finding-figure-media"><img src={publicAssetPath("figures/figure%2001.png")} alt="Park-use volume and diversity patterns by park type across the study period" /></div>
               <figcaption>Park-use patterns across the study period.</figcaption>
             </figure>
             <figure className="finding-figure">
-              <div className="finding-figure-media"><img src="/figures/figure%2002.jpg" alt="Facility association patterns for four population groups across the study period" /></div>
+              <div className="finding-figure-media"><img src={publicAssetPath("figures/figure%2002.jpg")} alt="Facility association patterns for four population groups across the study period" /></div>
               <figcaption>Facility patterns across population groups.</figcaption>
             </figure>
             <figure className="finding-figure">
-              <div className="finding-figure-media"><img src="/figures/figure%2003.jpg" alt="Adjusted facility and population-group associations across the study period" /></div>
+              <div className="finding-figure-media"><img src={publicAssetPath("figures/figure%2003.jpg")} alt="Adjusted facility and population-group associations across the study period" /></div>
               <figcaption>Adjusted facility–group associations.</figcaption>
             </figure>
           </div>
