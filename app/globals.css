@@ -199,7 +199,7 @@ footer {
 }
 
 .hero-description {
-  max-width: 680px;
+  max-width: none;
   margin: 20px 0 0;
   font-size: 1.12rem;
 }
@@ -1176,8 +1176,7 @@ footer {
   background: var(--teal-600);
 }
 
-.panel-prompt,
-.evidence-footnote {
+.panel-prompt {
   margin: 18px 0 0;
   padding: 10px 12px;
   border-radius: 7px;
@@ -1303,10 +1302,6 @@ footer {
 .bridge-arrow {
   color: var(--teal-700);
   font-size: 1.6rem;
-}
-
-.equity-section {
-  background: linear-gradient(180deg, transparent 0, transparent 12%, rgba(220, 239, 237, 0.26) 12%, rgba(220, 239, 237, 0.26) 88%, transparent 88%);
 }
 
 .equity-controls {
@@ -1648,12 +1643,6 @@ footer {
 .evidence-matrix button.negative { background: var(--coral-500); color: var(--navy-950); }
 .evidence-matrix button.unclear { background: var(--gray-150); color: var(--gray-700); }
 .evidence-matrix button.selected { border-color: #fff; outline: 2px solid var(--navy-950); outline-offset: 0; box-shadow: none; }
-
-.evidence-footnote {
-  width: fit-content;
-  max-width: 900px;
-  margin-top: 14px;
-}
 
 .findings-grid article > span {
   color: var(--teal-300);

@@ -845,7 +845,6 @@ export default function Home() {
                   ) : <div className="error-card"><strong>Evidence unavailable</strong><p>This combination could not be found in the approved table.</p></div>}
                 </aside>
               </div>
-              <p className="evidence-footnote">All 168 population-group × facility × year combinations are loaded from the approved fully adjusted fixed-effects model table. Direction and significance follow the source evidence exactly.</p>
             </>
           ) : null}
         </section>
