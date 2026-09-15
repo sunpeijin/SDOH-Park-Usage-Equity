@@ -1,40 +1,59 @@
-# Austin Park Facility Equity Explorer
+# ParkEquity ATX
 
-A local-first, responsive public evidence explorer for aggregated Austin park use and final facility-equity model results.
+**An Interactive Explorer of Park Usage and Social Equity Under Public Health Disruptions**
 
-## Local project
+ParkEquity ATX is an interactive research tool for exploring how park use and facility-related equity patterns changed across Austin, Texas, before, during, and after the COVID-19 public health disruption.
 
-- Working branch: `feature/sdoh-explorers`
-- Park Use Explorer: 237 approved park records
-- Facility Equity Explorer: 168 complete population-group × facility × year combinations
-- Public data: `public/data/park_summary_public.csv` and `public/data/facility_equity_evidence.csv`
-- Individual park-facility quantities are published only as `None`, `Low`, `Medium`, or `High` availability categories; exact research counts are not included.
-- No raw mobility, device, weekly, origin-destination, or intermediate analysis data are included.
+The application integrates aggregated smartphone mobility data, park facility information, and population-group-specific statistical results across 237 parks.
 
-## Run locally
+## Live Explorer
 
-Node.js 22.13 or newer is required.
+Explore the interactive application:
+
+https://sunpeijin.github.io/SDOH-Park-Usage-Equity/
+
+## What You Can Explore
+
+### Park Use Explorer
+
+Explore annual park visitation patterns across 237 Austin parks and compare how park use changed across the pre-outbreak, high-intensity pandemic, and adaptation periods.
+
+Interactive filters allow users to examine differences by year, park characteristics, facility availability, and park use patterns.
+
+### Facility Equity Explorer
+
+Explore how 14 types of park facilities are associated with park use among different population groups across 2019–2021.
+
+The explorer presents results from fully adjusted fixed-effects models and allows comparison across population groups, facility types, and years.
+
+Model coefficients represent statistical associations rather than causal effects or individual park equity scores.
+
+## Data and Privacy
+
+The public application uses aggregated and privacy-protected research data.
+
+The Park Use Explorer contains annual park-level summaries for 237 parks. Individual facility quantities are released only as categorical availability levels (`None`, `Low`, `Medium`, and `High`); exact research counts are not included.
+
+The repository does not contain raw mobility records, device-level data, weekly mobility data, origin–destination records, or intermediate research datasets.
+
+## Research
+
+The application translates findings from research on park facility use and social equity into an interactive format for researchers, planners, public health professionals, and other interested users.
+
+The underlying study examines how public health disruptions altered relationships between park facilities and park use among different population groups.
+
+## Citation
+
+If you use this project or its research findings, please cite the associated publication:
+
+**Social equity in park facilities: Assessing park usage patterns from 2019 to 2021 during the COVID-19 pandemic**
+
+https://doi.org/10.1016/j.ufug.2025.129249
+
+## Local Development
+
+Node.js 22 or newer is required.
 
 ```bash
 npm install
 npm run dev
-```
-
-Open `http://localhost:3000/`.
-
-## Validate
-
-```bash
-npm run lint
-npx tsc --noEmit
-npm run build
-npm test
-```
-
-## Data and interpretation
-
-The Park Use Explorer presents descriptive, park-level annual summaries. The Facility Equity Explorer presents sample-level coefficients from the fully adjusted fixed-effects model; coefficients are associations, not causal effects or individual park equity scores.
-
-Citation DOI: https://doi.org/10.1016/j.ufug.2025.129249
-
-This repository is prepared for local review. It is not merged to `main` or published.
