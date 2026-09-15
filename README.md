@@ -42,9 +42,17 @@ The application translates findings from research on park facility use and socia
 
 The underlying study examines how public health disruptions altered relationships between park facilities and park use among different population groups.
 
-## Citation
+## License and Citation
 
-If you use this project or its research findings, please cite the associated publication:
+The MIT License applies only to the source code in this repository.
+
+Research data and research materials are **not covered by the MIT License**. This includes the public research datasets, research results, statistical outputs, figures, tables, and other materials derived from the associated research.
+
+The datasets made available through this repository and the ParkEquity ATX application have been aggregated and/or privacy-protected for public presentation. Their inclusion in this public repository does not constitute release of the underlying research data or grant permission to redistribute, republish, or commercially reuse the research data or research materials.
+
+The associated research paper and its contents are also not covered by the MIT License and remain subject to the copyright and usage terms of the publisher.
+
+If you use, discuss, or reference the research data, results, figures, or findings presented through this project, please cite the associated publication:
 
 **Social equity in park facilities: Assessing park usage patterns from 2019 to 2021 during the COVID-19 pandemic**
 
